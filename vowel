@@ -1,0 +1,15 @@
+
+function disemvowel(str) {
+  var newStr = "";
+  for(var i =0; i< str.length; i++) {
+    var c= str.charAt (i); 
+    if (c === 'a'  || c=== 'e' || c === 'i' || c=== 'o' || c=== 'u' || c === "A" || c === "E" || c ==="I" || c=== "O" || c=== "U"){
+      console.log (i,str.charAt (i))
+    }else { 
+      newStr += c;  
+      console.log (newStr);
+    }
+  
+  }
+  return newStr;
+}
