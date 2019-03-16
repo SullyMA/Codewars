@@ -1,0 +1,9 @@
+function findNb(m) {
+    // your code
+    var cube = 0;
+    while (m > 0){
+    cube += 1
+    m -= Math.pow(cube, 3)
+  }
+  return m ? -1: cube
+}
