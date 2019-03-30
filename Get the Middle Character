@@ -1,0 +1,12 @@
+function getMiddle(s)
+{
+  //We are getting string, and we are returning middle character(s) of the string
+  //conditional to check the string if it's even
+  if (s.length %2 ===0) return s[(s.length/2)-1] +s[(s.length/2)] 
+  
+  //if it's even, return 2 middle character/letter
+  //else return the middle characters
+  //math.floor build-in method in js that let's you round down a specific value
+    else return s[Math.floor(s.length/2)]
+  //Code goes here!
+}
