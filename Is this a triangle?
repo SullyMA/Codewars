@@ -1,0 +1,10 @@
+function isTriangle(a,b,c) {
+// triangle formula
+  if (a+b<=c || a+c<=b || b+c<=a) {
+//   return if true
+    return false;
+  } else {
+//   else false
+    return true;
+  }
+}
