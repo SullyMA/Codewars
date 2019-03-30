@@ -1,0 +1,9 @@
+function even_or_odd(number) {
+  // ...
+  //getting a number & returning string
+  //conditional is checking for even/odds
+  if (number %2 === 0) return "Even"
+  //if even is returning "Even"
+  //else if it's odd, it return "Odd"
+  else return "Odd"
+}
