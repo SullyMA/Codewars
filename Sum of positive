@@ -1,0 +1,12 @@
+//given an array of num and returning sum of the positive ones only
+function positiveSum(arr) {
+  //create a var that holds the sum
+  let sum= 0
+  //loop thru the array
+  for (let i=0; i<arr.length; i++){
+  //conditional to check if its positive that its greater or equal to 0, add the value to the sum
+    if (arr[i]>=0) sum +=arr[i]
+  }
+  //return sum
+  return sum 
+}
