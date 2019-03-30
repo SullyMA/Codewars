@@ -1,0 +1,53 @@
+function dontGiveMeFive(start, end)
+{
+
+//   create a count that will return a result
+//   create a loop that will iterate from start to end
+//   create an if condition that will exclude any number that has a 5 in it
+
+  let count = 0
+
+  for(let beginning = start; beginning <= end; beginning++)
+  {
+
+//     console.log(beginning, end);
+
+    if(isItFive(beginning)){
+
+      count = count
+
+    }else{
+
+    count++;
+
+    }
+
+//     console.log(count)
+
+  }
+
+  function isItFive(five)
+  {
+    let indext = 0;
+    let numberFive = five.toString()
+
+//     console.log(five)
+
+    for(let i = indext; i < numberFive.length; i++){
+
+//     console.log(i)
+
+    if(numberFive.charAt(i) === "5")
+    {
+      console.log(numberFive.charAt(i))
+
+      return true;
+
+    }
+
+    }
+
+  }
+
+  return count;
+}
