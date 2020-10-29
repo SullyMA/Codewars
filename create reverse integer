@@ -1,6 +1,6 @@
-function reverse(n){
+const reverse = n => {
   // your code here
-  var reversed = 0;
+  let reversed = 0;
   while (n > 0) {
         reversed *= 10
         reversed += n % 10
