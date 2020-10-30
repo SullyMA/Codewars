@@ -1,0 +1,14 @@
+Example: 
+
+longerStr('hello', "It's snowing in boston") ==> Expected output: "It's snowing in boston"
+
+const longerStr = (str1, str2) => {
+    //if the string one length is greater than the string two
+    if(str1.length > str2.length){
+        //then return string one
+        return str1;
+    } else {
+        //else, return string two
+        return str2;
+    }
+}
