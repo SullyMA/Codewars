@@ -1,0 +1,16 @@
+Sum all the numbers of the array except the highest and the lowest element.
+
+Example:
+[ 6, 2, 1, 8, 10 ] => 16
+[ 1, 1, 11, 2, 3 ] => 6
+
+const sumArr = arr => {
+    const lowest = Math.min(...arr)
+    const higest = Math.max(...arr)
+           arr.splice(arr.indexOf(lowest), 1);
+           arr.splice(arr.indexOf(higest), 1)
+    
+    return arr.reduce((sum, num)=> {
+    return sum + num;
+        }, 0)
+    }
