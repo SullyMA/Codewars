@@ -1,0 +1,19 @@
+Expected output ===> 906609
+
+const isPalindrome = num => {
+    //return palindrome
+    return num.toString() === num.toString().split('').reverse().join('');
+
+  }
+  const largestPalindrome = () => {
+    const arr = [];
+    for(let i = 999; i > 100; i--) {
+      for(let j = 999; j > 100; j--) {
+        let product = j * i;
+        if(isPalindrome(product)) {
+          arr.push(j * i);
+        }
+      }
+    }
+    return Math.max.apply(Math, arr);
+  }
