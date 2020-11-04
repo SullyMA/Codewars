@@ -1,0 +1,20 @@
+Given an array and chunk size, divide the array into many subarrays where each subarray is of length size.
+
+Expected output: 
+
+[1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+[1, 2, 3, 4, 5], 2) --> [[ 1, 2], [3, 4], [5]]
+[1, 2, 3, 4, 5, 6, 7, 8], 3) --> [[ 1, 2, 3], [4, 5, 6], [7, 8]]
+
+
+const chunk  = (array, size) => {
+  const chunked = [];
+  let index = 0;
+  while (index < array.length) {
+  // remove the array starting at index and ending at the index plus the size and then push into chunked array
+    chunked.push(array.slice(index, index + size));
+    //add index to size
+    index += size;
+  }
+  return chunked;
+  }
