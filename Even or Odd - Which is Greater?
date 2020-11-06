@@ -1,0 +1,18 @@
+Level: 7 kyu
+
+const evenOrOdd = str => {
+  let even = [...str].map(Number).filter((i => i % 2 === 0)).reduce((a, b) => a + b)
+  let odd = [...str].map(Number).filter((i => i % 2 !== 0)).reduce((a, b) => a + b)
+  if(odd > even){
+    return 'Odd is greater than Even';
+  } else if(even > odd){
+    return 'Even is greater than Odd';
+  } else {
+    return 'Even and Odd are the same';
+  }
+}
+
+
+console.log(evenOrOdd('12'), 'Even is greater than Odd'); ==> output : Even is greater than Odd
+console.log(evenOrOdd('123'), 'Odd is greater than Even'); ==> output : Odd is greater than Even
+console.log(evenOrOdd('112'), 'Even and Odd are the same'); ==> output : Even and Odd are the same
