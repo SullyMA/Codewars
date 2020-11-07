@@ -1,0 +1,11 @@
+
+Level: 7 kyu
+String matchup
+
+//loop thru array two, if the string matches the string in array one, increament it, else do nothing. 
+
+const solve =(a,b) => b.map(val => a.reduce((acc, currentVal ) => val === currentVal ? acc + 1 : acc, 0))
+
+console.log(solve(['abc', 'abc','xyz','abcd','cde'], ['abc', 'cde', 'uap']), [2, 1, 0]); ==> expected output: [2, 1, 0]
+console.log(solve(['abc', 'xyz','abc', 'xyz','cde'], ['abc', 'cde', 'xyz']), [2, 1, 2]); ==> expected output: [2, 1, 2]
+console.log(solve(['quick', 'brown', 'fox', 'is', 'quick'], ['quick', 'abc', 'fox']), [2, 0, 1]); expected output: [2, 0, 1]
