@@ -1,0 +1,31 @@
+
+7 kyu
+Special Number (Special Numbers Series #5)
+
+const specialNumber = (n) => {
+        let strNum = n.toString()
+        //digit array of special numbers
+        let digitArr = ['0', '1', '2', '3', '4', '5'];
+        //loop through the string number
+        for(let i = 0; i < strNum.length; i++){
+        //if the digit array does not include the string value
+            if(!digitArr.includes(strNum[i])){
+            //return msg
+                return  "NOT"
+            } 
+     }
+     //else return Special
+     return "Special!!"
+}
+
+
+    console.log(specialNumber(2),"Special!!");
+    console.log(specialNumber(3),"Special!!");
+    console.log(specialNumber(6),"NOT!!");
+    console.log(specialNumber(9),"NOT!!");
+    console.log(specialNumber(11),"Special!!");
+    console.log(specialNumber(55),"Special!!");
+    console.log(specialNumber(26),"NOT!!");
+    console.log(specialNumber(92),"NOT!!");
+    console.log(specialNumber(25432),"Special!!");
+    console.log(specialNumber(2783),"NOT!!");
