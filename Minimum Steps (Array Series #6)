@@ -1,0 +1,27 @@
+7 kyu
+Minimum Steps (Array Series #6)
+
+
+Given an array of N integers, you have to find how many times you have to add up the smallest numbers in the array until their Sum becomes greater or equal to K.
+
+const minimumSteps = (numbers, value) => {
+  //sort the numbers inside of the array
+  numbers.sort((a, b) => a - b);
+  let steps = -1;
+  let sum = 0;
+  for(let i = 0; i <numbers.length; i++){
+    //add the sum and numbers
+    sum += numbers[i];
+    //increament the step by 1
+    steps += 1;
+    //if the sum is greater or equal to the value
+    if(sum >= value){
+      //then return the steps value
+      return steps;
+    }
+  }
+}
+
+console.log(minimumSteps([4,6,3], 7), 1);
+console.log(minimumSteps([10,9,9,8], 17), 1);
+console.log(minimumSteps([8,9,10,4,2], 23), 3);
