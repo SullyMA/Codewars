@@ -1,0 +1,20 @@
+7 kyu
+Maximum Gap (Array Series #4)
+
+Given an array/list [] of integers , Find The maximum difference between the successive elements in its sorted form.
+
+const maxGap = arr => {
+  let sortedArr = arr.sort((a,b) => b-a);
+  let sums = [];
+  for(let i= 0; i < sortedArr.length-1; i++){
+    let sum = sortedArr[i] - sortedArr[i+1]
+    sums.push(sum)
+  }
+  return Math.max(...sums)
+}
+
+console.log(maxGap([13,10,2,9,5]),4);
+console.log(maxGap([13,3,5]),8);
+console.log(maxGap([24,299,131,14,26,25]),168);
+console.log(maxGap([-3,-27,-4,-2]),23);
+console(maxGap([-7,-42,-809,-14,-12]),767);
