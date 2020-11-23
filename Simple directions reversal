@@ -1,0 +1,28 @@
+7 kyu
+Simple directions reversal
+
+
+Simple, given a string of words, return the length of the shortest word(s). String will never be empty and you do not need to account for different data types
+
+
+const solve = arr =>  {
+  
+ const reversed = arr.reverse();
+  
+  return reversed.map((cur, ind, arr) => {
+    if (ind === 0) {
+      return cur.replace(/(Left|Right)/, 'Begin');
+    }
+    if (arr[ind - 1].includes('Left')) {
+      return cur.replace(/(Left|Right|Begin)/, 'Right');
+    }
+    if (arr[ind - 1].includes('Right')) {
+      return cur.replace(/(Left|Right|Begin)/, 'Left');
+    }
+  });
+}
+
+
+console.log(solve(['Begin on 3rd Blvd', 'Right on First Road', 'Left on 9th Dr']), ['Begin on 9th Dr', 'Right on First Road', 'Left on 3rd Blvd']);
+console.log(solve(["Begin on Road A","Right on Road B","Right on Road C","Left on Road D"]),['Begin on Road D', 'Right on Road C', 'Left on Road B', 'Left on Road A']);
+console.log(solve(['Begin on Road A']),['Begin on Road A'])
