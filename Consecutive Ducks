@@ -1,0 +1,23 @@
+7 kyu
+Consecutive Ducks
+
+Task
+Given Positive integer, N , Return true if it could be expressed as a sum of two or more consecutive positive numbers , OtherWise return false .
+
+const consecutiveDucks = num => {
+  //loop while the num is greater than 2
+  while(num > 2){
+    //if the num divisible of 2 is not equal to zero
+    if(num % 2 !== 0){
+      return true;
+    } 
+    num = num / 2;
+  }
+  return false;
+}
+
+console.log(consecutiveDucks(69), true);
+console.log(consecutiveDucks(8), false);
+console.log(consecutiveDucks(57), true);
+console.log(consecutiveDucks(6), true);
+console.log(consecutiveDucks(13), true);
