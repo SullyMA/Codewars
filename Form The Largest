@@ -1,0 +1,18 @@
+7 kyu
+Form The Largest
+
+Task
+Given a number , Return _The Maximum number _ could be formed from the digits of the number given .
+
+Input >> Output Examples:
+maxNumber (213) ==> return (321)
+
+const maxNumber = n => {
+  return +n.toString().split('').sort((a, b) => a < b).join('')
+}
+
+
+ console.log(maxNumber(213), 321);
+ console.log(maxNumber(7389), 9873);
+ console.log(maxNumber(63792), 97632);
+ console.log(maxNumber(566797), 977665);
